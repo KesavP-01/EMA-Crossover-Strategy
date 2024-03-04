@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sun Sep  3 11:26:14 2023
-
-@author: KESAV
-"""
 import numpy as np
 import pandas as pd
 import yfinance as yf
@@ -43,11 +37,10 @@ def max_dd(DF):
     max_dd = df["drawdown_pct"].max()
     return max_dd
 
-# Download historical data (monthly) for DJI constituent stocks
 
 tickers = ["AXP","AMGN","AAPL","BA","CAT","CSCO","CVX","GS","HD","HON","IBM","INTC","JNJ","KO","JPM","MCD","MMM","MRK","MSFT","NKE","PG","TRV","UNH","CRM","VZ","V","WBA","WMT","DIS","DOW"]
 
-ohlc_mon = {} # directory with ohlc value for each stock            
+ohlc_mon = {}           
 start = dt.datetime.today()-dt.timedelta(1460)
 end = dt.datetime.today()
 
@@ -102,11 +95,3 @@ plt.title("Index Return vs Strategy Return")
 plt.ylabel("cumulative return")
 plt.xlabel("months")
 ax.legend(["Strategy Return","Index Return"])
-
-
-        
-        
-        
-    
-
-
