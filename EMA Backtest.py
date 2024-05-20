@@ -106,4 +106,5 @@ data['ema_20'].plot()
 data['ema_100'].plot()
 plt.scatter(x= data.index, y= signals['Buy_price'], marker = '^', color= 'green', s= 200)
 plt.scatter(x= data.index, y= signals['Sell_price'], marker = 'v', color= 'red', s= 200)
+plt.legend(loc= 'upper left')
 
