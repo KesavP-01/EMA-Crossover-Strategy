@@ -2,7 +2,6 @@ import pandas as pd
 import numpy as np
 import yfinance as yf
 import matplotlib.pyplot as plt
-import seaborn as sn
 
 
 def buy_sell(Stock, start, end, ema_1, ema_2, capital_per_trade):
@@ -16,7 +15,6 @@ def buy_sell(Stock, start, end, ema_1, ema_2, capital_per_trade):
     buy = []
     sell = []
     signal = []
-    d = []
     
     for i in range(ema_2-1, len(df)-1):
          
@@ -76,8 +74,6 @@ def Stats(data):
     dt = data.copy()
     trades = data['position'].diff().fillna(0).astype(bool).sum(axis=0)
     
-    win_ratio = round((data['daily_pnl'] >0).sum()) / data['position'].count() * 100
-    
     c_return = round(data['cum_ret'][-1],4) * 100
     dt['retn'] = data['Adj Close'].pct_change()
     dt['c_ret'] = (1+dt['retn']).cumprod()
@@ -91,7 +87,6 @@ def Stats(data):
     
     cagr = (dt["c_ret"][-1]**(1/n)-1) * 100
     stat = pd.DataFrame({'No_of_trades' : trades,
-                         '%_of_Winning_trades': win_ratio,
                          'Cummulative_return': c_return,
                          'CAGR': cagr,
                          'Max_drawdown': max_dd,
@@ -101,7 +96,7 @@ def Stats(data):
     
             
             
-data, signals = buy_sell('MSFT', '2023-01-01', '2024-03-01', 20, 100, 0.5)
+data, signals = buy_sell('MSFT', '2021-01-01', '2024-03-01', 20, 100, 0.5)
 stats = Stats(data)
 
 
