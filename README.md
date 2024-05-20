@@ -8,25 +8,16 @@ This project implements a simple trading strategy based on the Exponential Movin
 
 ## Parameters:
 
-#### Stock (str): The ticker symbol of the stock (e.g., 'MSFT').
+- **Stock (str)**: The ticker symbol of the stock (e.g., 'MSFT').
+- **start (str)**: The start date for the historical data in 'YYYY-MM-DD' format.
+- **end (str)**: The end date for the historical data in 'YYYY-MM-DD' format.
+- **ema_1 (int)**: The span for the shorter EMA.
+- **ema_2 (int)**: The span for the longer EMA.
+- **capital_per_trade (float)**: The amount of capital allocated per trade.
 
-#### start (str): The start date for the historical data in 'YYYY-MM-DD' format.
-
-#### end (str): The end date for the historical data in 'YYYY-MM-DD' format.
-
-#### ema_1 (int): The span for the shorter EMA.
-
-#### ema_2 (int): The span for the longer EMA.
-
-#### capital_per_trade (float): The amount of capital allocated per trade.
 ## Returns:
-
-#### df (DataFrame): The dataframe containing historical data, EMAs, positions, daily P&L, and cumulative returns.
-
-#### dt (DataFrame): The dataframe containing buy/sell signals.
-
-
-
+- **df (DataFrame)**: The dataframe containing historical data, EMAs, positions, daily P&L, and cumulative returns.
+- **dt (DataFrame)**: The dataframe containing buy/sell signals.
 
 
 ## Results
