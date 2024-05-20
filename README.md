@@ -33,4 +33,4 @@ This project implements a simple trading strategy based on the Exponential Movin
 
 ![MSFT Year Signals](https://github.com/KesavP-01/EMA-Crossover-Strategy/assets/161378031/478a7385-1b2d-47e9-a989-5fca5b4abe87)
 
-#### We achieved a Cummulative return of 26.33% over 3 years for MSFT stock, while placing 5 trades
+#### Achieved a Cummulative return of 26.33% over 3 years for MSFT stock, while placing 5 trades
