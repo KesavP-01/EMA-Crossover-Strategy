@@ -96,7 +96,7 @@ def Stats(data):
     
             
             
-data, signals = buy_sell('MSFT', '2021-01-01', '2024-03-01', 20, 100, 0.5)
+data, signals = buy_sell('MSFT', '2023-01-01', '2024-03-01', 20, 100, 0.5)
 stats = Stats(data)
 
 
