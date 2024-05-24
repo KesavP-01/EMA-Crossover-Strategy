@@ -85,10 +85,8 @@ def Stats(data):
     
     max_dd = (dt['drawdown'] / dt['c_roll_max']).max() * 100
     
-    cagr = (dt["c_ret"][-1]**(1/n)-1) * 100
     stat = pd.DataFrame({'No_of_trades' : trades,
                          'Cummulative_return': c_return,
-                         'CAGR': cagr,
                          'Max_drawdown': max_dd,
                          'Annualized_volatility': vol}, index=['0'])
     return stat
